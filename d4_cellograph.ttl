@@ -1,20 +1,3 @@
-cg:    a                 owl:Ontology ;
-        rdfs:label         " CelloGragh "@en-us ;
-        dcterms:created    "2021-12-01"^^xsd:date ;
-        dcterms:creator    "Xuelian & Umayer & Tyler"@en-us ;
-        dcterms:license    <http://spatialai.org/software> ;
-        dcterms:modified   "2021-12-21"^^xsd:date ;
-        dcterms:publisher  <http://spatialai.org/> ;
-        dcterms:rights     "Copyright 2021 - 2031 UMaine/SKAI."@en-us ;
-        dcterms:subject    "Ontology"@en-us ;
-        owl:versionIRI     <http://spatialai.org/cellograph/v1> ;
-        owl:versionInfo    "1.0"@en-us .
-
-
-# ####### #
-#  Class  #
-# ####### #
-
 # Declaration of highest-level class
 :MaterialEntity rdf:type owl:Class .
 
