@@ -1,6 +1,4 @@
-THIS IS ADDED!!
-
-THIS IS ADDED TOO!!
+wwwwwwwwwwww
 
 # Declaration of highest-level class
 :MaterialEntity rdf:type owl:Class .
