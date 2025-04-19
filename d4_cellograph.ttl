@@ -7,16 +7,16 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
 cg:    a                 owl:Ontology ;
-       rdfs:label         " CelloGragh "@en-us ;
-       dcterms:created    "2021-12-01"^^xsd:date ;
-       dcterms:creator    "Xuelian & Umayer & Tyler"@en-us ;
-       dcterms:license    <http://spatialai.org/software> ;
-       dcterms:modified   "2021-12-21"^^xsd:date ;
-       dcterms:publisher  <http://spatialai.org/> ;
-       dcterms:rights     "Copyright 2021 - 2031 UMaine/SKAI."@en-us ;
-       dcterms:subject    "Ontology"@en-us ;
-       owl:versionIRI     <http://spatialai.org/cellograph/v1> ;
-       owl:versionInfo    "1.0"@en-us .
+        rdfs:label         " CelloGragh "@en-us ;
+        dcterms:created    "2021-12-01"^^xsd:date ;
+        dcterms:creator    "Xuelian & Umayer & Tyler"@en-us ;
+        dcterms:license    <http://spatialai.org/software> ;
+        dcterms:modified   "2021-12-21"^^xsd:date ;
+        dcterms:publisher  <http://spatialai.org/> ;
+        dcterms:rights     "Copyright 2021 - 2031 UMaine/SKAI."@en-us ;
+        dcterms:subject    "Ontology"@en-us ;
+        owl:versionIRI     <http://spatialai.org/cellograph/v1> ;
+        owl:versionInfo    "1.0"@en-us .
 
 
 # ####### #
@@ -84,7 +84,7 @@ cg:    a                 owl:Ontology ;
 
 # Declaration of inverse property
 :isFoundIn rdf:type owl:ObjectProperty ;
-   owl:inverseOf :hasPart .
+    owl:inverseOf :hasPart .
 
 
 ####################################################
@@ -92,8 +92,8 @@ cg:    a                 owl:Ontology ;
 :Cellulose :composes :CelluloseMicrofibril.
 
 :D-Glucose :hasPart :CarbonAtom;
-          :hasPart :HydrogenAtom;
-          :hasPart :OxygenAtom.
+           :hasPart :HydrogenAtom;
+           :hasPart :OxygenAtom.
 
 :D-Glucose :isLinkedWith :GlycosidicBond.
 
@@ -102,26 +102,26 @@ cg:    a                 owl:Ontology ;
 :Cellulose :isInsolubleIn :Water.
 
 :composes rdf:type owl:ObjectProperty ; 
-   owl:inverseOf :isComposedOf .
+    owl:inverseOf :isComposedOf .
 
 :composes rdf:type owl:ObjectProperty ;
-   rdf:type owl:AsymmetricProperty ;
-   rdf:type owl:IrreflexiveProperty .
+    rdf:type owl:AsymmetricProperty ;
+    rdf:type owl:IrreflexiveProperty .
 
 :D-Glucose rdfs:subClassOf 
-   [rdf:type owl:Restriction ;
-       owl:onProperty :hasPart ;
-       owl:Cardinality "6"^^xsd:nonNegativeInteger ;
-       owl:someValuesFrom :CarbonAtom],
-   [rdf:type owl:Restriction ;
-       owl:onProperty :hasPart ;
-       owl:Cardinality "6"^^xsd:nonNegativeInteger ;
-       owl:someValuesFrom :OxygenAtom],
-   [rdf:type owl:Restriction ;
-       owl:onProperty :hasPart ;
-       owl:Cardinality "12"^^xsd:nonNegativeInteger ;
-       owl:someValuesFrom :HydrogenAtom].
-       
+    [rdf:type owl:Restriction ;
+        owl:onProperty :hasPart ;
+        owl:Cardinality "6"^^xsd:nonNegativeInteger ;
+        owl:someValuesFrom :CarbonAtom],
+    [rdf:type owl:Restriction ;
+        owl:onProperty :hasPart ;
+        owl:Cardinality "6"^^xsd:nonNegativeInteger ;
+        owl:someValuesFrom :OxygenAtom],
+    [rdf:type owl:Restriction ;
+        owl:onProperty :hasPart ;
+        owl:Cardinality "12"^^xsd:nonNegativeInteger ;
+        owl:someValuesFrom :HydrogenAtom].
+        
 
 #####################################################
 
@@ -132,36 +132,36 @@ cg:    a                 owl:Ontology ;
 
 # Datatype properties of Cellulose
 :rigidity rdf:type owl:DatatypeProperty ;
-rdfs:domain :Cellulose ;
-rdfs:range xsd:string .
-
+	rdfs:domain :Cellulose ;
+	rdfs:range xsd:string .
+	
 :state rdf:type owl:DatatypeProperty ;
-rdfs:domain :Cellulose ;
-rdfs:range xsd:string .
-
+	rdfs:domain :Cellulose ;
+	rdfs:range xsd:string .
+	
 :chirality rdf:type owl:DatatypeProperty ;
-rdfs:domain :Cellulose ;
-rdfs:range xsd:string .
-
+	rdfs:domain :Cellulose ;
+	rdfs:range xsd:string .
+	
 :taste rdf:type owl:DatatypeProperty ;
-rdfs:domain :Cellulose ;
-rdfs:range xsd:string .
-
+	rdfs:domain :Cellulose ;
+	rdfs:range xsd:string .
+	
 :odor rdf:type owl:DatatypeProperty ;
-rdfs:domain :Cellulose ;
-rdfs:range xsd:string .
-
+	rdfs:domain :Cellulose ;
+	rdfs:range xsd:string .
+	
 :hydrophilicity rdf:type owl:DatatypeProperty ;
-rdfs:domain :Cellulose ;
-rdfs:range xsd:string .
-
+	rdfs:domain :Cellulose ;
+	rdfs:range xsd:string .
+	
 :polarity rdf:type owl:DatatypeProperty ;
-rdfs:domain :Cellulose ;
-rdfs:range xsd:string .
-
+	rdfs:domain :Cellulose ;
+	rdfs:range xsd:string .
+	
 :degradability rdf:type owl:DatatypeProperty ;
-rdfs:domain :Cellulose ;
-rdfs:range xsd:string .
+	rdfs:domain :Cellulose ;
+	rdfs:range xsd:string .
 
 
 # ################## #
@@ -169,25 +169,25 @@ rdfs:range xsd:string .
 # ################## #
 
 :hasPart rdfs:domain :MaterialEntity ;
-rdfs:range :MaterialEntity.
+	rdfs:range :MaterialEntity.
 
 :isLinkedWith rdfs:domain :MaterialEntity ;
-rdfs:range :ChemicalBond.
+	rdfs:range :ChemicalBond.
 
 :isComposedOf rdfs:domain :MaterialEntity ;
-rdfs:range :MaterialEntity .
+	rdfs:range :MaterialEntity .
 
 :isInsolubleIn rdfs:domain :MaterialEntity ;
-rdfs:range :MaterialEntity .
+	rdfs:range :MaterialEntity .
 
 :composes rdfs:domain :MaterialEntity ;
-rdfs:range :MaterialEntity .
+	rdfs:range :MaterialEntity .
 
 :produce rdfs:domain :CelluloseNaturalSource ;
-rdfs:range :Cellulose .
+	rdfs:range :Cellulose .
 
 :isFoundIn rdfs:domain :MaterialEntity ;
-rdfs:range :MaterialEntity .
+	rdfs:range :MaterialEntity .
 
 
 # ####### #
@@ -196,121 +196,121 @@ rdfs:range :MaterialEntity .
 
 # Property axioms
 :hasPart rdf:type owl:ObjectProperty ;
-rdf:type owl:AsymmetricProperty ;
-rdf:type owl:IrreflexiveProperty .
-
+	rdf:type owl:AsymmetricProperty ;
+	rdf:type owl:IrreflexiveProperty .
+	
 
 :isLinkedWith rdf:type owl:ObjectProperty ;
-rdf:type owl:AsymmetricProperty ;
-rdf:type owl:IrreflexiveProperty .
+	rdf:type owl:AsymmetricProperty ;
+	rdf:type owl:IrreflexiveProperty .
 
 :isComposedOf rdf:type owl:ObjectProperty ;
-rdf:type owl:AsymmetricProperty ;
-rdf:type owl:IrreflexiveProperty .
+	rdf:type owl:AsymmetricProperty ;
+	rdf:type owl:IrreflexiveProperty .
 
 :isInsolubleIn rdf:type owl:ObjectProperty ;
-rdf:type owl:AsymmetricProperty ;
-rdf:type owl:IrreflexiveProperty .
+	rdf:type owl:AsymmetricProperty ;
+	rdf:type owl:IrreflexiveProperty .
 
 :produce rdf:type owl:ObjectProperty ;
-rdf:type owl:AsymmetricProperty ;
-rdf:type owl:IrreflexiveProperty.
+	rdf:type owl:AsymmetricProperty ;
+	rdf:type owl:IrreflexiveProperty.
 
 :isFoundIn rdf:type owl:ObjectProperty ;
-rdf:type owl:AsymmetricProperty ;
-rdf:type owl:IrreflexiveProperty .
+	rdf:type owl:AsymmetricProperty ;
+	rdf:type owl:IrreflexiveProperty .
 
 # Class axioms
 :OrganicCompound rdfs:subClassOf 
-   [rdf:type owl:Restriction ;
-       owl:onProperty :hasPart ;
-       owl:someValuesFrom :CarbonAtom] .
+    [rdf:type owl:Restriction ;
+        owl:onProperty :hasPart ;
+        owl:someValuesFrom :CarbonAtom] .
 
 :Carbohydrate rdfs:subClassOf 
-   [rdf:type owl:Restriction ;
-       owl:onProperty :hasPart ;
-       owl:someValuesFrom :HydrogenAtom] ,
-[rdf:type owl:Restriction ;
-       owl:onProperty :hasPart ;
-       owl:someValuesFrom :OxygenAtom] .
-                       
+    [rdf:type owl:Restriction ;
+        owl:onProperty :hasPart ;
+        owl:someValuesFrom :HydrogenAtom] ,
+	[rdf:type owl:Restriction ;
+        owl:onProperty :hasPart ;
+        owl:someValuesFrom :OxygenAtom] .
+                        
 :CelluloseFiber rdfs:subClassOf 
-[rdf:type owl:Restriction ;
-       owl:onProperty :isComposedOf ;
-       owl:someValuesFrom :Cellulose] .
+	[rdf:type owl:Restriction ;
+        owl:onProperty :isComposedOf ;
+        owl:someValuesFrom :Cellulose] .
 
 :CelluloseNaturalSource rdfs:subClassOf 
-[rdf:type owl:Restriction ;
-       owl:onProperty :produce ;
-       owl:someValuesFrom :Cellulose] .
+	[rdf:type owl:Restriction ;
+        owl:onProperty :produce ;
+        owl:someValuesFrom :Cellulose] .
 
 :Cellulose rdfs:subClassOf 
-[rdf:type owl:Restriction ;
-       owl:onProperty :isInsolubleIn ;
-       owl:someValuesFrom :Water] ,
-[rdf:type owl:Restriction ;
-       owl:onProperty :isComposedOf ;
-  owl:minCardinality "500"^^xsd:nonNegativeInteger ;
-       owl:allValuesFrom :D-Glucose] .
+	[rdf:type owl:Restriction ;
+        owl:onProperty :isInsolubleIn ;
+        owl:someValuesFrom :Water] ,
+	[rdf:type owl:Restriction ;
+        owl:onProperty :isComposedOf ;
+		owl:minCardinality "500"^^xsd:nonNegativeInteger ;
+        owl:allValuesFrom :D-Glucose] .
 
 :D-Glucose rdfs:subClassOf 
-[rdf:type owl:Restriction ;
-       owl:onProperty :isLinkedWith ;
-       owl:someValuesFrom :GlycosidicBond] .
+	[rdf:type owl:Restriction ;
+        owl:onProperty :isLinkedWith ;
+        owl:someValuesFrom :GlycosidicBond] .
 
 :CelluloseMicrofibril rdfs:subClassOf 
-[rdf:type owl:Restriction ;
-       owl:onProperty :isLinkedWith ;
-       owl:someValuesFrom :HydrogenBond] ,
-[rdf:type owl:Restriction ;
-       owl:onProperty :isFoundIn ;
-       owl:someValuesFrom :PlantCell] .
+	[rdf:type owl:Restriction ;
+        owl:onProperty :isLinkedWith ;
+        owl:someValuesFrom :HydrogenBond] ,
+	[rdf:type owl:Restriction ;
+        owl:onProperty :isFoundIn ;
+        owl:someValuesFrom :PlantCell] .
 
 :Plant rdfs:subClassOf 
-   [rdf:type owl:Restriction ;
-       owl:onProperty :hasPart ;
-       owl:someValuesFrom :PlantCell] .
+    [rdf:type owl:Restriction ;
+        owl:onProperty :hasPart ;
+        owl:someValuesFrom :PlantCell] .
 
 :PlantCell rdfs:subClassOf 
-   [rdf:type owl:Restriction ;
-       owl:onProperty :isFoundIn ;
-       owl:someValuesFrom :Plant] .
+    [rdf:type owl:Restriction ;
+        owl:onProperty :isFoundIn ;
+        owl:someValuesFrom :Plant] .
 
 :CarbonAtom rdfs:subClassOf 
-[rdf:type owl:Restriction ;
-       owl:onProperty :isFoundIn ;
-       owl:someValuesFrom :OrganicCompound] .
+	[rdf:type owl:Restriction ;
+        owl:onProperty :isFoundIn ;
+        owl:someValuesFrom :OrganicCompound] .
 
 :OxygenAtom rdfs:subClassOf 
-[rdf:type owl:Restriction ;
-       owl:onProperty :isFoundIn ;
-       owl:someValuesFrom :Carbohydrate] .
+	[rdf:type owl:Restriction ;
+        owl:onProperty :isFoundIn ;
+        owl:someValuesFrom :Carbohydrate] .
 
 :HydrogenAtom rdfs:subClassOf 
-[rdf:type owl:Restriction ;
-       owl:onProperty :isFoundIn ;
-       owl:someValuesFrom :Carbohydrate] .
+	[rdf:type owl:Restriction ;
+        owl:onProperty :isFoundIn ;
+        owl:someValuesFrom :Carbohydrate] .
 
 :ChemicalBond owl:disjointUnionOf
-   (:GlycosidicBond
-   :HydrogenBond) .
+    (:GlycosidicBond
+    :HydrogenBond) .
 
 :Atom owl:disjointUnionOf
-   (:CarbonAtom
-   :OxygenAtom
-   :HydrogenAtom) .
+    (:CarbonAtom
+    :OxygenAtom
+    :HydrogenAtom) .
 
 :CellulosicProduct owl:disjointUnionOf
-   (:CellulosicPaper
-   :CelluloseDerivedBiofuel
-   :CellulosicFabric
-   :NitrocelluloseGunPowder) .
+    (:CellulosicPaper
+    :CelluloseDerivedBiofuel
+    :CellulosicFabric
+    :NitrocelluloseGunPowder) .
 
 :CelluloseNaturalSource owl:disjointUnionOf
-   (:Plant
-   :SomeAnimal
-   :SomeBacteria) .
+    (:Plant
+    :SomeAnimal
+    :SomeBacteria) .
 
 :Carbohydrate owl:disjointUnionOf
-   (:Polysaccharide
-   :D-Glucose) .
+    (:Polysaccharide
+    :D-Glucose) .
