@@ -1,3 +1,6 @@
+class Hello:
+    pass
+
 def greetings(name):
     print(f'Hello {name}, welcome to the tiny world!')
 
